@@ -2,7 +2,7 @@
 
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(dirname(__FILE__)));
+echo ROOT.DS.'lib'.DS.'init.php';
+require_once(ROOT.DS.'lib'.DS.'init.php');
 
-$uri = $_SERVER['REQUEST_URI'];
-
-print_r($uri);
+$router=new Router($_SERVER['REQUEST_URI']);
